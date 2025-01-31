@@ -52,6 +52,23 @@ pub fn two_sum_double_pass_hashmap(nums: Vec<i32>, target: i32) -> Vec<i32> {
     vec![]
 }
 
+// Using single-pass lookup to hashmap
+pub fn two_sum_single_pass_hashmap(nums: Vec<i32>, target: i32) -> Vec<i32> {
+    let mut solution: HashMap<usize, i32> = HashMap::default(); // keys are value of nums vec, idx are index of nums vec
+    for (idx, val) in nums.iter().enumerate() {
+        let complement = (target - val) as usize;
+        if solution.contains_key(&complement) {
+            let sol_idx = solution.get(&complement).unwrap();
+            if (idx as i32) != *sol_idx {
+                return vec![idx as i32, *sol_idx];
+            }
+        } else {
+            solution.insert(*val as usize, idx as i32);
+        }
+    }
+    vec![]
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -64,13 +81,25 @@ mod tests {
         let r2 = two_sum_brute_force(vec![3, 2, 4], 6);
         assert_eq!(r2, vec![1, 2]);
 
-        let r3 = two_sum_brute_force(vec![3, 3], 6);
-        assert_eq!(r3, vec![0, 1]);
+        let mut r3 = two_sum_brute_force(vec![3, 3], 6);
+        r3.sort();
+        let mut target = [0, 1];
+        target.sort();
+        assert_eq!(r3, target);
     }
 
     #[test]
     fn test_two_sum_double_pass_hashmap() {
         let r1 = two_sum_double_pass_hashmap(vec![2, 7, 11, 15], 9);
         assert_eq!(r1, vec![0, 1]);
+    }
+
+    #[test]
+    fn test_two_sum_single_pass_hashmap() {
+        let mut r1 = two_sum_single_pass_hashmap(vec![2, 7, 11, 15], 9);
+        r1.sort();
+        let mut expected = [0, 1];
+        expected.sort();
+        assert_eq!(r1, expected);
     }
 }
