@@ -1,17 +1,20 @@
+#![feature(test)]
+extern crate test;
+
 use std::collections::HashMap;
 
-/// Intuition
-/// <!-- Describe your first thoughts on how to solve this problem. -->
+// Intuition
+// <!-- Describe your first thoughts on how to solve this problem. -->
 
-/// Approach
-/// <!-- Describe your approach to solving the problem. -->
+// Approach
+// <!-- Describe your approach to solving the problem. -->
 
-/// Complexity
-/// Time complexity:
-/// <!-- Add your time complexity here, e.g. $$O(n)$$ -->
+// Complexity
+// Time complexity:
+// <!-- Add your time complexity here, e.g. $$O(n)$$ -->
 
-/// Space complexity:
-/// <!-- Add your space complexity here, e.g. $$O(n)$$ -->
+// Space complexity:
+// <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 
 // Using brute force i.e. nested iteration -> O(n^2)
 pub fn two_sum_brute_force(nums: Vec<i32>, target: i32) -> Vec<i32> {
@@ -72,26 +75,36 @@ pub fn two_sum_single_pass_hashmap(nums: Vec<i32>, target: i32) -> Vec<i32> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use test::Bencher;
 
     #[test]
     fn test_two_sum_brute_force() {
-        let r1 = two_sum_brute_force(vec![2, 7, 11, 15], 9);
-        assert_eq!(r1, vec![0, 1]);
+        let mut r1 = two_sum_brute_force(vec![2, 7, 11, 15], 9);
+        r1.sort();
+        let mut expected = [0, 1];
+        expected.sort();
+        assert_eq!(r1, expected);
 
-        let r2 = two_sum_brute_force(vec![3, 2, 4], 6);
-        assert_eq!(r2, vec![1, 2]);
+        let mut r2 = two_sum_brute_force(vec![3, 2, 4], 6);
+        r2.sort();
+        let mut expected = [1, 2];
+        expected.sort();
+        assert_eq!(r2, expected);
 
         let mut r3 = two_sum_brute_force(vec![3, 3], 6);
         r3.sort();
-        let mut target = [0, 1];
-        target.sort();
-        assert_eq!(r3, target);
+        let mut expected = [0, 1];
+        expected.sort();
+        assert_eq!(r3, expected);
     }
 
     #[test]
     fn test_two_sum_double_pass_hashmap() {
-        let r1 = two_sum_double_pass_hashmap(vec![2, 7, 11, 15], 9);
-        assert_eq!(r1, vec![0, 1]);
+        let mut r1 = two_sum_double_pass_hashmap(vec![2, 7, 11, 15], 9);
+        r1.sort();
+        let mut expected = [0, 1];
+        expected.sort();
+        assert_eq!(r1, expected);
     }
 
     #[test]
@@ -101,5 +114,26 @@ mod tests {
         let mut expected = [0, 1];
         expected.sort();
         assert_eq!(r1, expected);
+    }
+
+    #[bench]
+    fn bench_two_sum_brute_force(b: &mut Bencher) {
+        b.iter(|| {
+            two_sum_brute_force(vec![3, 2, 4, 1, 0, 10, 15, 17, 11], 14);
+        })
+    }
+
+    #[bench]
+    fn bench_two_sum_double_pass_hashmap(b: &mut Bencher) {
+        b.iter(|| {
+            two_sum_double_pass_hashmap(vec![3, 2, 4, 1, 0, 10, 15, 17, 11], 14);
+        })
+    }
+
+    #[bench]
+    fn bench_two_sum_single_pass_hashmap(b: &mut Bencher) {
+        b.iter(|| {
+            two_sum_single_pass_hashmap(vec![3, 2, 4, 1, 0, 10, 15, 17, 11], 14);
+        })
     }
 }
