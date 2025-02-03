@@ -1,3 +1,4 @@
+#![allow(clippy::redundant_closure)]
 pub fn is_leap_year(n: i32) -> String {
     if n % 400 == 0 {
         String::from("Leap Year")
