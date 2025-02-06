@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "check_and_balance"
+version = "0.1.0"
+
+[[package]]
 name = "count_lit_lanterns"
 version = "0.1.0"
 
