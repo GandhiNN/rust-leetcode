@@ -11,6 +11,10 @@ name = "count_rice"
 version = "0.1.0"
 
 [[package]]
+name = "count_sturdy_sticks"
+version = "0.1.0"
+
+[[package]]
 name = "count_vowels"
 version = "0.1.0"
 
@@ -20,6 +24,10 @@ version = "0.1.0"
 
 [[package]]
 name = "leap_year"
+version = "0.1.0"
+
+[[package]]
+name = "lucky_charms_product"
 version = "0.1.0"
 
 [[package]]
