@@ -19,6 +19,10 @@ name = "count_vowels"
 version = "0.1.0"
 
 [[package]]
+name = "find_hidden_wisdom"
+version = "0.1.0"
+
+[[package]]
 name = "is_palindrome"
 version = "0.1.0"
 
