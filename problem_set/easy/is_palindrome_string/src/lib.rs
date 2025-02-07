@@ -3,8 +3,13 @@ string input is a palindrome regardless of case */
 pub fn is_palindrome(str_input: &str) -> bool {
     let strlen = str_input.len();
     for (i, v) in str_input.to_lowercase().chars().enumerate() {
-        if v == str_input.to_lowercase().chars().nth(strlen-i-1).unwrap() {
-            continue
+        if v == str_input
+            .to_lowercase()
+            .chars()
+            .nth(strlen - i - 1)
+            .unwrap()
+        {
+            continue;
         } else {
             return false;
         }
