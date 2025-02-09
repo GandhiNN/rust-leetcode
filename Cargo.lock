@@ -7,6 +7,10 @@ name = "check_and_balance"
 version = "0.1.0"
 
 [[package]]
+name = "check_ingredients"
+version = "0.1.0"
+
+[[package]]
 name = "circle_shuffle"
 version = "0.1.0"
 
