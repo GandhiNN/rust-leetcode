@@ -15,6 +15,10 @@ name = "circle_shuffle"
 version = "0.1.0"
 
 [[package]]
+name = "contains_duplicate"
+version = "0.1.0"
+
+[[package]]
 name = "count_lit_lanterns"
 version = "0.1.0"
 
@@ -28,6 +32,10 @@ version = "0.1.0"
 
 [[package]]
 name = "count_vowels"
+version = "0.1.0"
+
+[[package]]
+name = "find_balance_point"
 version = "0.1.0"
 
 [[package]]
