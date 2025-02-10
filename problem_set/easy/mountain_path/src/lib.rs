@@ -62,6 +62,28 @@ pub fn mountain_path_v2(path: &[i32]) -> i32 {
     1
 }
 
+/* TODO: Still Not Quite Right */
+pub fn mountain_path_v3(path: &[i32]) -> i32 {
+    let mut i = 1;
+    let n = path.len();
+    let mut is_mountain = false;
+    // go on if ascneding, and more items existing
+    while i < n && path[i] > path[i - 1] {
+        i += 1;
+    }
+    if i == 1 || i == n {
+        is_mountain = false;
+    }
+    // at the descending point...
+    while n > i && path[i] < path[i - 1] {
+        i += 1;
+    }
+    if i == n {
+        is_mountain = true;
+    }
+    if is_mountain { 1 } else { 0 }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -70,27 +92,27 @@ mod tests {
     fn test_mountain_path_true() {
         let paths = vec![1, 3, 5, 4, 2];
         let expected = 1;
-        assert_eq!(mountain_path_v2(&paths), expected);
+        assert_eq!(mountain_path_v3(&paths), expected);
     }
 
     #[test]
     fn test_mountain_path_false() {
         let paths = vec![1, 2, 3, 4, 5];
         let expected = 0;
-        assert_eq!(mountain_path_v2(&paths), expected);
+        assert_eq!(mountain_path_v3(&paths), expected);
     }
 
     #[test]
     fn test_mountain_path_false_2() {
         let paths = vec![2, 1, 2, 3, 4, 3, 1];
         let expected = 0;
-        assert_eq!(mountain_path_v2(&paths), expected);
+        assert_eq!(mountain_path_v3(&paths), expected);
     }
 
     #[test]
     fn test_mountain_path_with_plateau() {
         let paths = vec![1, 2, 2, 4, 3, 1];
         let expected = 0;
-        assert_eq!(mountain_path_v2(&paths), expected);
+        assert_eq!(mountain_path_v3(&paths), expected);
     }
 }
