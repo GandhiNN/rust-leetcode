@@ -62,27 +62,40 @@ pub fn mountain_path_v2(path: &[i32]) -> i32 {
     1
 }
 
-/* TODO: Still Not Quite Right */
+/* Two pointers: if one people traverse the mountain
+from the left and there is another people traverse the
+mountain from the right, they will have the same "peak" */
 pub fn mountain_path_v3(path: &[i32]) -> i32 {
-    let mut i = 1;
-    let n = path.len();
-    let mut is_mountain = false;
-    // go on if ascneding, and more items existing
-    while i < n && path[i] > path[i - 1] {
-        i += 1;
+    let mut peak_left = 0;
+    let mut peak_right = 0;
+    let mountain_len = path.len();
+    // array must contain at least 3 elements
+    if mountain_len < 3 {
+        return 0;
     }
-    if i == 1 || i == n {
-        is_mountain = false;
+    // traverse from the left
+    for i in 1..mountain_len - 1 {
+        if (path[i] > path[i - 1]) && (path[i] > path[i + 1]) {
+            peak_left = path[i];
+            println!("peak left: {}", peak_left);
+            break;
+        } else if (path[i + 1] == path[i]) || (path[i] < path[i - 1]) {
+            return 0;
+        }
     }
-    // at the descending point...
-    while n > i && path[i] < path[i - 1] {
-        i += 1;
+    // traverse from the right
+    for (i, v) in path.iter().enumerate().rev().skip(1) {
+        if (path[i] > path[i - 1]) && (path[i] > path[i + 1]) {
+            peak_right = *v;
+            println!("peak right: {}", peak_right);
+            break;
+        } else if (path[i + 1] == path[i]) || (path[i] < path[i - 1]) {
+            return 0;
+        }
     }
-    if i == n {
-        is_mountain = true;
-    }
-    if is_mountain { 1 } else { 0 }
+    if peak_left == peak_right { 1 } else { 0 }
 }
+// traverse from the right
 
 #[cfg(test)]
 mod tests {
@@ -96,7 +109,7 @@ mod tests {
     }
 
     #[test]
-    fn test_mountain_path_false() {
+    fn test_mountain_path_false_1() {
         let paths = vec![1, 2, 3, 4, 5];
         let expected = 0;
         assert_eq!(mountain_path_v3(&paths), expected);
