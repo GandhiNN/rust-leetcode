@@ -11,6 +11,10 @@ name = "check_ingredients"
 version = "0.1.0"
 
 [[package]]
+name = "check_wrapping"
+version = "0.1.0"
+
+[[package]]
 name = "circle_shuffle"
 version = "0.1.0"
 

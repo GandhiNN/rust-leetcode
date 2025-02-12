@@ -38,6 +38,7 @@ pub fn plus_one_v2(digits: Vec<i32>) -> Vec<i32> {
         } else if *val == 9 {
             result[idx] = 0;
             if idx == 0 {
+                // if the first digit is 9, insert 1 at the beginning of the vector
                 result.insert(0, 1);
             }
         }
