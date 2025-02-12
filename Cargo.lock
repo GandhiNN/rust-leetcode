@@ -59,6 +59,10 @@ name = "leap_year"
 version = "0.1.0"
 
 [[package]]
+name = "longest_chant"
+version = "0.1.0"
+
+[[package]]
 name = "longest_common_prefix"
 version = "0.1.0"
 
