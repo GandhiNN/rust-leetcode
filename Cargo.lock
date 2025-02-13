@@ -91,6 +91,10 @@ name = "min_hall_index"
 version = "0.1.0"
 
 [[package]]
+name = "min_max_product"
+version = "0.1.0"
+
+[[package]]
 name = "mountain_path"
 version = "0.1.0"
 
