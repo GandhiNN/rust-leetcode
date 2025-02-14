@@ -83,6 +83,10 @@ name = "max_profit"
 version = "0.1.0"
 
 [[package]]
+name = "meal_combinations"
+version = "0.1.0"
+
+[[package]]
 name = "min_hall"
 version = "0.1.0"
 
