@@ -9,7 +9,7 @@ N is prime, it's sufficient to test for divisibility
 using numbers from 2 up to the square root of N
 */
 pub fn is_prime(number: i32) -> &'static str {
-    if number <= 2 {
+    if number < 2 {
         return "Not prime!";
     }
     for i in 2..number {
