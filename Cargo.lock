@@ -59,6 +59,10 @@ name = "is_prime"
 version = "0.1.0"
 
 [[package]]
+name = "is_prime_v2"
+version = "0.1.0"
+
+[[package]]
 name = "leap_year"
 version = "0.1.0"
 
