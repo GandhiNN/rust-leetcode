@@ -55,6 +55,10 @@ name = "is_palindrome_string"
 version = "0.1.0"
 
 [[package]]
+name = "is_prime"
+version = "0.1.0"
+
+[[package]]
 name = "leap_year"
 version = "0.1.0"
 
