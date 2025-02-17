@@ -44,7 +44,7 @@ mod tests {
 
     #[test]
     fn test_is_prime_3() {
-        let number = 2;
+        let number = 1;
         let expected = "Not prime!";
         assert_eq!(is_prime(number), expected);
     }
