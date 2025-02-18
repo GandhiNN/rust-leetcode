@@ -127,6 +127,10 @@ name = "rust-leetcode"
 version = "0.1.0"
 
 [[package]]
+name = "search_item"
+version = "0.1.0"
+
+[[package]]
 name = "second_tallest_bonsai"
 version = "0.1.0"
 
