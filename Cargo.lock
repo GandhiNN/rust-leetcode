@@ -71,6 +71,10 @@ name = "leap_year"
 version = "0.1.0"
 
 [[package]]
+name = "log_base_2"
+version = "0.1.0"
+
+[[package]]
 name = "longest_bamboo_streak"
 version = "0.1.0"
 
@@ -120,6 +124,10 @@ version = "0.1.0"
 
 [[package]]
 name = "plus_one"
+version = "0.1.0"
+
+[[package]]
+name = "reverse_array"
 version = "0.1.0"
 
 [[package]]
