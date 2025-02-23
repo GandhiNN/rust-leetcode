@@ -51,6 +51,10 @@ name = "find_item_index"
 version = "0.1.0"
 
 [[package]]
+name = "find_peaks"
+version = "0.1.0"
+
+[[package]]
 name = "is_palindrome"
 version = "0.1.0"
 
@@ -152,6 +156,10 @@ version = "0.1.0"
 
 [[package]]
 name = "stone_energy_difference"
+version = "0.1.0"
+
+[[package]]
+name = "sum_opposite_pairs"
 version = "0.1.0"
 
 [[package]]
