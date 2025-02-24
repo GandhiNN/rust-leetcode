@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "calculate_power"
+version = "0.1.0"
+
+[[package]]
 name = "check_and_balance"
 version = "0.1.0"
 
@@ -20,6 +24,10 @@ version = "0.1.0"
 
 [[package]]
 name = "contains_duplicate"
+version = "0.1.0"
+
+[[package]]
+name = "count_factors"
 version = "0.1.0"
 
 [[package]]
