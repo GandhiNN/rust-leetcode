@@ -27,6 +27,10 @@ name = "contains_duplicate"
 version = "0.1.0"
 
 [[package]]
+name = "count_digits"
+version = "0.1.0"
+
+[[package]]
 name = "count_factors"
 version = "0.1.0"
 
