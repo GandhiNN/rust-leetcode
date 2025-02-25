@@ -51,4 +51,11 @@ mod tests {
         let expected = 0;
         assert_eq!(reverse_number(number), expected);
     }
+
+    #[test]
+    fn test_reverse_number_4() {
+        let number = 1000000;
+        let expected = 1;
+        assert_eq!(reverse_number(number), expected);
+    }
 }
