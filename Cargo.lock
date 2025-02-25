@@ -147,6 +147,10 @@ name = "reverse_array"
 version = "0.1.0"
 
 [[package]]
+name = "reverse_number"
+version = "0.1.0"
+
+[[package]]
 name = "roman_to_int"
 version = "0.1.0"
 
