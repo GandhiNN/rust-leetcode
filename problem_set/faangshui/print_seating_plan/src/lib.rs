@@ -14,7 +14,7 @@ output = "#######
 */
 pub fn print_seating_plan(seats_per_row: i32) {
     for _j in 0..3 {
-        for i in 0..seats_per_row {
+        for _i in 0..seats_per_row {
             print!("#");
         }
         println!();
