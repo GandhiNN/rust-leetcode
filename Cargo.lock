@@ -147,6 +147,10 @@ name = "print_apprentice_steps"
 version = "0.1.0"
 
 [[package]]
+name = "print_descending_steps"
+version = "0.1.0"
+
+[[package]]
 name = "print_seating_plan"
 version = "0.1.0"
 
