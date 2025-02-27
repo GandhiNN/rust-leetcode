@@ -17,7 +17,8 @@ Output =
 */
 pub fn print_descending_steps(rows: &i32) {
     let mut n: i32 = *rows;
-    for _i in 0..*rows {
+    for _i in 1..=*rows {
+        // inclusive range
         for _j in 0..n {
             print!("*");
         }
