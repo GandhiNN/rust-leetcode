@@ -107,6 +107,10 @@ name = "lucky_charms_product"
 version = "0.1.0"
 
 [[package]]
+name = "matrix_sum"
+version = "0.1.0"
+
+[[package]]
 name = "max_diff"
 version = "0.1.0"
 
@@ -176,6 +180,10 @@ version = "0.1.0"
 
 [[package]]
 name = "search_item"
+version = "0.1.0"
+
+[[package]]
+name = "search_name"
 version = "0.1.0"
 
 [[package]]
