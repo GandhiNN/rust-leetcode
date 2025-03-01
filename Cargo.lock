@@ -199,6 +199,10 @@ name = "stone_energy_difference"
 version = "0.1.0"
 
 [[package]]
+name = "sum_columns"
+version = "0.1.0"
+
+[[package]]
 name = "sum_opposite_pairs"
 version = "0.1.0"
 
