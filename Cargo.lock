@@ -155,6 +155,10 @@ name = "print_descending_steps"
 version = "0.1.0"
 
 [[package]]
+name = "print_diamond"
+version = "0.1.0"
+
+[[package]]
 name = "print_hollow_box"
 version = "0.1.0"
 
