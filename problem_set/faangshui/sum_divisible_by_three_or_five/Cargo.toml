@@ -1,0 +1,6 @@
+[package]
+name = "sum_divisible_by_three_or_five"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

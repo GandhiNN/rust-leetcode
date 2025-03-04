@@ -219,6 +219,10 @@ name = "sum_columns"
 version = "0.1.0"
 
 [[package]]
+name = "sum_divisible_by_three_or_five"
+version = "0.1.0"
+
+[[package]]
 name = "sum_opposite_pairs"
 version = "0.1.0"
 
