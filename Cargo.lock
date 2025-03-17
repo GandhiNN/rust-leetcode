@@ -175,6 +175,10 @@ name = "print_multiplication_table"
 version = "0.1.0"
 
 [[package]]
+name = "print_number_triangle"
+version = "0.1.0"
+
+[[package]]
 name = "print_seating_plan"
 version = "0.1.0"
 
