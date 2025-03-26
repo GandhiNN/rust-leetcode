@@ -47,6 +47,10 @@ name = "count_sturdy_sticks"
 version = "0.1.0"
 
 [[package]]
+name = "count_training_sessions"
+version = "0.1.0"
+
+[[package]]
 name = "count_vowels"
 version = "0.1.0"
 
